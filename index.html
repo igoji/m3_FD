@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Presupuesto app</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+      <div class="container my-4">
+        <header class="mb-4">
+            <h2>PRESUPUESTO APP</h2>
+        </header>
+        <div class="row">
+            <div class="col">
+                <div class="card alert alert-success p-2">
+                    <div class="card-body">
+                        <label for="presupuestoInput" class="form-label">Ingresa tu Presupuesto</label>
+                        <input type="text" class="form-control" name="presupuestoInput" id="presupuestoInput">
+                        <button type="button" class="btn btn-outline-success mt-2" onclick="ingresarPresupuesto()">Calcular</button>
+                    </div>  
+                </div>
+                <div class="card alert alert-danger p-2">
+                    <div class="card-body">
+                        <label for="nombreGasto" class="form-label">Ingresa el nombre del gasto</label>
+                        <input type="text" class="form-control" name="nombreGasto" id="nombreGasto">
+                        <label for="cantidadGasto" class="form-label">Ingresa la cantidad del gasto</label>
+                        <input type="text" class="form-control" name="cantidadGasto" id="cantidadGasto">
+                        <button type="button" class="btn btn-outline-danger mt-2" onclick="ingresarGasto()">Añadir Gasto</button>
+                    </div>  
+                </div>
+            </div>
+            <div class="col">
+                <div class="row text-center pb-5 mb-5">
+                    <div class="col"><h5>Presupuesto</h5><strong><span>$</span><span id="presupuestoDisplay">0</span></strong></div>
+                    <div class="col"><h5>Gastos</h5><strong><span>$</span><span id="gastoDisplay">0</span></strong></div>
+                    <div class="col"><h5>Saldo</h5><strong><span>$</span><span id="saldoDisplay">0</span></strong></div>
+                </div>
+                <div>
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Gasto</th>
+                            <th scope="col">Valor</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tr class="table-group-divider"></tr>   
+                        <tbody id="tablaGastos">
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
